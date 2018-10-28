@@ -1,0 +1,13 @@
+.word {
+  padding: 5px 10px;
+  height: 30px;
+  background-color: #a1a1a1;
+  border-radius: 40px;
+  text-align: center;
+  &-hiragana {
+    font-size: 12px;
+  }
+  &-cn {
+    font-size: 18px;
+  }
+}
