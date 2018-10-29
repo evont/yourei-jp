@@ -87,7 +87,6 @@ exports.main = (event, context) => {
           const list = [];
           const $relativeWord = $('#next-freq-ngrams').find('.ngram-link');
           $relativeWord.each((i, ele) => {
-            const _self = $(ele);
             const content = $(ele).text();
             const param = content.replace(/\(.+\)/, '');
             const percent = content.match(/\d+/)[0];

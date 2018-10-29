@@ -1,0 +1,41 @@
+.usage {
+  margin: 0 30px;
+  &-relative {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  &-sentence {
+    padding: 20px 0;
+  }
+}
+
+.head {
+  
+  &-text {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.word {
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+  padding: 0 30px;
+  height: 60px;
+  line-height: 50px;
+  border-radius: 30px;
+  background-color: #efefef;
+  &-text {
+    font-size: 20px;
+  }
+}
+
+.holder {
+  padding: 160px;
+  text-align: center;
+  &-text {
+    color: #bbb;
+    font-size: 28px;
+  }
+}

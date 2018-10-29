@@ -10,12 +10,6 @@ class App extends Component {
       'pages/index/index',
       'pages/usage/index'
     ],
-    window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
   }
 
   componentWillMount () {
