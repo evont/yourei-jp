@@ -1,13 +1,21 @@
 .word {
-  padding: 5px 10px;
-  height: 30px;
-  background-color: #a1a1a1;
-  border-radius: 40px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  &-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  &-content {
+    flex: 1;
+    padding: 20px 0;
+    border-bottom: 1px solid #f1f1f1;
+  }
   &-hiragana {
-    font-size: 12px;
+    font-size: 22px;
   }
   &-cn {
-    font-size: 18px;
+    font-size: 30px;
   }
 }

@@ -1,0 +1,38 @@
+.block {
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px 5px #eeeeee;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  align-content: center;
+  &-content {
+    flex: 1;
+    &-text {
+      position: relative;
+      z-index: 1;
+      padding: 0 10px;
+    }
+  }
+  &-btn {
+    height: 40px;
+    line-height: 30px;
+    width: 100px;
+    border: 1px solid #3ca3b1;
+    border-radius: 8px;
+    text-align: center;
+    &-text {
+      font-size: 20px;
+      color: #3ca3b1;
+    }
+  }
+}
+
+.hotlist {
+  height: 500px;
+  &-item {
+    width: 95%;
+  }
+}

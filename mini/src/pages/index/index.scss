@@ -4,6 +4,7 @@
   justify-content: center;
   padding: 20px 35px;
   border-bottom: 1px solid #eee;
+  background-color: #242424;
   &-contain {
     display: flex;
     align-items: center;
@@ -11,32 +12,42 @@
     padding: 0 20px;
     height: 80px;
     border-radius: 80px;
-    background-color: #e1e1e1;
+    background-color: #aaa;
   }
   &-input {
     padding: 0 10px;
+    font-size: 26px;
+    color: #ffffff;
+    &-holder {
+      color: #efefef;
+    }
   }
 }
 
 .main {
-  padding: 20px 35px;
-}
-.title {
-  font-size: 40px;
-  font-weight: bold;
-}
-.tab {
-  display: flex;
-
-  &-item {
-    padding: 0 20px;
-    margin: 10px 20px 0 0;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 60px;
-    font-size: 26px;
-    &-cur {
-      background-color: #f1f1f1;
+  padding: 20px;
+  &-title {
+    padding: 10px 35px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  &-scroll {
+    padding: 50px 0;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    &-item {
+      margin: 20px;
     }
+  }
+}
+
+.holder {
+  padding: 100px;
+  text-align: center;
+  &-text {
+    color: #bbb;
+    font-size: 28px;
   }
 }
