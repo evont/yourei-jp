@@ -1,5 +1,5 @@
 export default class Api {
-  static request(options, showLoading = false) {
+  static request(options, failCb) {
     const { action, data = {}, cb } = options;
     const queryData = Object.assign({ $url: action }, data)
     wx.cloud.callFunction({
@@ -10,6 +10,7 @@ export default class Api {
       },
       fail: err => {
         console.error(`[云函数] [${action}] 调用失败`, err)
+        failCb && failCb();
       }
     })
   }

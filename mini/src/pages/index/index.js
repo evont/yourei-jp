@@ -1,9 +1,10 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Icon, Input, Text, ScrollView } from '@tarojs/components'
+import { View, Icon, Input, Text } from '@tarojs/components'
 import './index.scss'
 import Api from '../../utils/api';
 
 import WordBlock from './wordblock';
+import Holder from '../../components/holder';
 
 export default class Index extends Component {
 
@@ -69,9 +70,7 @@ export default class Index extends Component {
           </View>
           {
             isLoading ?
-              <View className='holder'>
-                <Text className='holder-text'>加载中...</Text>
-              </View>
+              <Holder text='加载中...' />
             :
               relativeData.length ?
                   <View 
@@ -89,9 +88,7 @@ export default class Index extends Component {
                     }
                   </View>
               :
-              <View className='holder'>
-                <Text className='holder-text'>暂无数据</Text>
-              </View>
+              <Holder text='暂无数据' />
           }
         </View>
       </View>

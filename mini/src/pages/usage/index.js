@@ -4,6 +4,7 @@ import './index.scss'
 import Api from '../../utils/api';
 
 import UsageItem from './usageitem';
+import Holder from '../../components/holder';
 
 class Usage extends Component {
 
@@ -104,9 +105,7 @@ class Usage extends Component {
         return <UsageItem key={index} index={index} data={element} word={this.$router.params.word} />
       })
     } else {
-      list = <View className='holder'>
-        <Text className='holder-text'>{ isLoading ? '加载中...' : '无相关用例' }</Text>
-      </View>
+      list = <Holder text={isLoading ? '加载中...' : '无相关用例'} />
     }
     return (
         <View className='usage'>
@@ -122,9 +121,7 @@ class Usage extends Component {
                     </View>
                   })
                 : 
-                  <View className='holder'>
-                    <Text className='holder-text'>{ isLoading ? '加载中...' : '无相关单词' }</Text>
-                  </View>
+                  <Holder text={isLoading ? '加载中...' : '无相关单词'} />
               }
           </View>
           <View className='usage-sentence'>
@@ -142,9 +139,7 @@ class Usage extends Component {
                     </View>
                   </View>
                 :
-                  <View className='holder'>
-                    <Text className='holder-text'>没有更多了</Text>
-                  </View>
+                  <Holder text='没有更多了' />
               }
           </View>
       </View>
