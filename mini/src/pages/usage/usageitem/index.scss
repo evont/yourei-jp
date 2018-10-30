@@ -1,0 +1,18 @@
+.usage {
+  padding: 20px 0;
+  &-sentence {
+    display: flex;
+    &-index {
+      padding: 0 20px;
+      font-size: 26px;
+    }
+    &-node {
+      font-size: 30px;
+    }
+  }
+  &-title {
+    font-size: 20px;
+    text-align: right;
+    color: #999;
+  }
+}

@@ -39,12 +39,6 @@ class WordBlock extends Component {
       listContent,
     })
   }
-  goUsage(cn) {
-    console.log(cn)
-    Taro.navigateTo({
-      url: `pages/usage/index?word=${cn}`,
-    })
-  }
   random() {
     const { listContent } = this.state;
     const randomNum = Math.round(Math.random() * listContent.length);

@@ -6,7 +6,6 @@ import iconBookSvg from '../../img/icon-book.svg';
 
 class Word extends Component {
   goUsage(cn) {
-    console.log(cn)
     Taro.navigateTo({
       url: `/pages/usage/index?word=${cn}`,
     })

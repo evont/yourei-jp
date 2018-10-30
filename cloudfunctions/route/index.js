@@ -89,7 +89,7 @@ exports.main = (event, context) => {
           $relativeWord.each((i, ele) => {
             const content = $(ele).text();
             const param = content.replace(/\(.+\)/, '');
-            const percent = content.match(/\d+/)[0];
+            const percent = content.match(/\d+/) ? content.match(/\d+/)[0] : 0;
             list.push({
               word: param,
               percent,

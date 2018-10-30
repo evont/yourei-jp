@@ -1,5 +1,5 @@
 export default class Api {
-  static request(options) {
+  static request(options, showLoading = false) {
     const { action, data = {}, cb } = options;
     const queryData = Object.assign({ $url: action }, data)
     wx.cloud.callFunction({

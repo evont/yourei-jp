@@ -1,4 +1,4 @@
-import Taro, { Component, navigateTo } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro'
 import { View, Icon, Input, Text, ScrollView } from '@tarojs/components'
 import './index.scss'
 import Api from '../../utils/api';
@@ -24,24 +24,18 @@ export default class Index extends Component {
   componentWillMount () { }
 
   componentDidMount () {
-    Taro.navigateTo({
-      url: `/pages/usage/index?word=周章狼狽`,
+    Api.request({
+      action: 'hot',
+      cb: (res) => {
+        const data = res.data
+        const relativeData = data.list
+        this.setState({
+          relativeData,
+          isLoading: false,
+        })
+        Taro.hideLoading()
+      }
     })
-    // Taro.showLoading({
-    //   title: '数据加载中',
-    // })
-    // Api.request({
-    //   action: 'hot',
-    //   cb: (res) => {
-    //     const data = res.data
-    //     const relativeData = data.list
-    //     this.setState({
-    //       relativeData,
-    //       isLoading: false,
-    //     })
-    //     Taro.hideLoading()
-    //   }
-    // })
    }
 
   componentWillUnmount () { }
@@ -80,31 +74,20 @@ export default class Index extends Component {
               </View>
             :
               relativeData.length ?
-                <ScrollView 
-                  scrollX
-                  scrollWithAnimation
-                >
                   <View 
                     className='main-scroll'
-                    style={{ 
-                      width: `${relativeData.length * 350}px`
-                    }}
                   >
                     {
                       relativeData.map((ele, ind) => {
                         return <View 
                           className='main-scroll-item' 
                           key={ind}
-                          style={{ 
-                            width: '310px'
-                          }}
                         >
                           <WordBlock blockData={ele} />
                         </View>
                       })
                     }
                   </View>
-                </ScrollView>
               :
               <View className='holder'>
                 <Text className='holder-text'>暂无数据</Text>
